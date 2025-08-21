@@ -1,0 +1,13 @@
+Test the Root Endpoint:
+curl "http://localhost:3000/"
+
+Clear Firefox cache:
+curl "http://localhost:3000/clear?app=firefox"
+
+Expected output: {"success":true,"message":"Cache and history cleared successfully"}
+
+
+Close Firefox:
+curl "http://localhost:3000/close?app=firefox"
+
+Expected output: {"success":false,"message":"No running instance found for firefox"} (if not opened) or {"success":true,"message":"Browser terminated successfully"}.
